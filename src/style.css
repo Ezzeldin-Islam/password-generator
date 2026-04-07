@@ -8,6 +8,7 @@
 
 #container {
   min-height: 130vh;
+  width: 100%;
 }
 
 .include {
