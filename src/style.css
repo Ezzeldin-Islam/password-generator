@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+body {
+  min-width: 100vh;
+}
+
+.include {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 0.5rem;
+  label,
+  input {
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+
+#progress {
+  div {
+    width: 0%;
+  }
+}

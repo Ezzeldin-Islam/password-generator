@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>password-generator</title>
+    <link href="./src/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="container"
+      class="w-screen h-screen flex items-center justify-center bg-linear-to-r from-violet-400 to-violet-500">
+      <div id="password-app" class="p-10 rounded-2xl bg-[#eee] ">
+        <h1
+          class="text-[#0e035c] text-4xl font-bold relative before:absolute before:content-[''] before:w-1/2 before:h-1 before:bg-[#0e035c] before:left-[50%] before:translate-x-[-50%] before:-bottom-2.5 text-center">password
+          generator</h1>
+
+        <div id="result"
+          class="bg-white text-[#0e035c] text-2xl mt-10 mb-5 p-4 rounded-lg flex items-center justify-between">
+          <span class="cursor-pointer">Press generate to get password</span>
+          <button id="copy-btn"
+            class="p-2 rounded-lg  cursor-pointer text-lg "><i
+              class="fa-regular fa-copy"></i></button>
+        </div>
+
+        <div id="options"
+          class="bg-white rounded-2xl mt-5 mb-10 p-10 text-[#0e035c]">
+          <div class="length flex items-center justify-between gap-10">
+            <label for="length" class="text-xl">Password Length:</label>
+            <input type="range" id="length" min="6"
+              max="20" value="6">
+            <div
+              class="number w-5 h-5 flex items-center justify-center bg-[#0e035c] text-white p-5 rounded-xl text-xl"
+              id="num-of-range">6</div>
+          </div>
+
+          <div class="in-upper include ">
+            <label for="uppercase">include uppercase</label>
+            <input type="checkbox" class="w-5 h-5 rounded-xl" id="uppercase">
+          </div>
+
+          <div class="in-lower include ">
+            <label for="lowercase">include lowercase</label>
+            <input type="checkbox" class="w-5 h-5 rounded-xl" id="lowercase">
+          </div>
+
+          <div class="in-numbers include ">
+            <label for="numbers">include numbers</label>
+            <input type="checkbox" class="w-5 h-5 rounded-xl" id="numbers">
+          </div>
+
+          <div class="in-symboles include ">
+            <label for="symboles">include symbols</label>
+            <input type="checkbox" class="w-5 h-5 rounded-xl" id="symboles">
+          </div>
+        </div>
+
+        <button id="generate-btn"
+          class="w-full p-3 rounded-lg bg-[#0d044c] text-white text-xl cursor-pointer duration-300 hover:bg-[#0e035c] hover:scale-[1.1]">generate
+          password</button>
+
+        <div id="measure-str"
+          class="bg-white text-[#0e035c] text-2xl mt-10 mb-5 p-4 rounded-lg ">
+          <div class="flex justify-between items-center">
+            <span class="text-xl">password strength:</span>
+            <span id="strength" class="font-bold">weak</span>
+          </div>
+          <div id="progress" class="bg-[#ddd] rounded-2xl">
+            <div
+              class="progress-bar my-5 h-2.5 rounded-lg"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+    <script src="https://kit.fontawesome.com/52464e2445.js"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
