@@ -5,8 +5,8 @@
   text-transform: capitalize;
 }
 
-body {
-  min-width: 100vh;
+#container {
+  min-height: 130vh;
 }
 
 .include {
