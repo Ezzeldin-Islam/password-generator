@@ -10,13 +10,14 @@
   <body>
     <div id="container"
       class="w-screen h-screen flex items-center justify-center bg-linear-to-r from-violet-400 to-violet-500">
-      <div id="password-app" class="p-10 rounded-2xl bg-[#eee] ">
+      <div id="password-app"
+        class="p-10 rounded-2xl bg-[#eee] max-sm:w-[80%]">
         <h1
           class="text-[#0e035c] text-4xl font-bold relative before:absolute before:content-[''] before:w-1/2 before:h-1 before:bg-[#0e035c] before:left-[50%] before:translate-x-[-50%] before:-bottom-2.5 text-center">password
           generator</h1>
 
         <div id="result"
-          class="bg-white text-[#0e035c] text-2xl mt-10 mb-5 p-4 rounded-lg flex items-center justify-between">
+          class="bg-white text-[#0e035c] text-2xl mt-10 mb-5 p-4 rounded-lg flex items-center justify-between ">
           <span class="cursor-pointer">Press generate to get password</span>
           <button id="copy-btn"
             class="p-2 rounded-lg  cursor-pointer text-lg "><i
@@ -25,7 +26,8 @@
 
         <div id="options"
           class="bg-white rounded-2xl mt-5 mb-10 p-10 text-[#0e035c]">
-          <div class="length flex items-center justify-between gap-10">
+          <div
+            class="length flex items-center justify-between gap-10 max-sm:flex-col max-sm:gap-5">
             <label for="length" class="text-xl">Password Length:</label>
             <input type="range" id="length" min="6"
               max="20" value="6">
